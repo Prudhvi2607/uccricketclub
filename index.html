@@ -28,7 +28,7 @@
             justify-content: center;
         }
         header img {
-            height: 80px;
+            height: 150px;
             margin-bottom: 1rem;
         }
         nav {
@@ -133,6 +133,64 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+            header img {
+                height: 100px;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0.5rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            .content h2 {
+                font-size: 1.5rem;
+            }
+            .slideshow-container {
+                max-width: 100%;
+            }
+            .slides img {
+                border-radius: 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                padding: 0.3rem 0.5rem;
+                font-size: 0.8rem;
+            }
+            .hero {
+                padding: 2rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .content {
+                padding: 1rem;
+            }
+            footer {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -144,7 +202,7 @@
         <a href="#about">About</a>
         <a href="#highlights">Highlights</a>
         <a href="#schedule">Practice Schedule</a>
-        <a href="#Leaders">Leaders</a>
+        <a href="#leaders">Leaders</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -155,7 +213,7 @@
     <section class="content" id="about">
         <h2>About Us</h2>
         <p>The University of Cincinnati Cricket Club is dedicated to promoting cricket and nurturing talent at all levels.</p>
-        <p>We are based in the Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, fostering inclusivity while maintaining a competitive spirit.</p>
+        <p>We are based in Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, fostering inclusivity while maintaining a competitive spirit.</p>
         <p>We play regional leather ball cricket tournaments in Midwest (OH, IN, and KY), like the Midwest Cricket Tournament, and compete with teams across the region.</p>
     </section>
     <section class="content" id="highlights">
@@ -163,8 +221,7 @@
         <p>Our achievements include:</p>
         <p>2023 T20 Division II Runners-up</p>
         <p>2021 T35 Division II Runners-up</p>
-        <p>2011-2018 T35/T20 Playoffs</p>
-        <p>2010 T35 Division I Champions</p>
+        <p>2018 T35/T20 Playoffs</p>
     </section>
     <section class="content" id="schedule">
         <h2>Practice Schedule</h2>
@@ -173,7 +230,7 @@
         <p>Fielding practice - Tuesdays 6PM at <a href="https://goo.gl/maps/XHLP8xE2rC72" target="_blank">Gettler Stadium, Cincinnati, OH</a></p>
         <p>Batting/Bowling - Thursdays 5PM at <a href="https://goo.gl/maps/LBGwQcfoGoD3FiE49" target="_blank">Miami Meadows Park - 1546B OH-131, Milford, OH 45150</a></p>
     </section>
-    <section class="content" id="Leaders">
+    <section class="content" id="leaders">
         <h2>Our Leaders</h2>
         <p>Captain - Arth Ganatra</p>
         <p>Vice Captain - Sudheer Bonthu</p>
