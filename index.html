@@ -1,58 +1,228 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Site In Progress</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Cincinnati Cricket Club</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Raleway:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #343a40;
+        }
+        header {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #0077b6;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            background: #023e8a;
+            transform: scale(1.1);
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to right, #0077b6, #023e8a);
+            color: white;
+            border-bottom-left-radius: 50% 10vw;
+            border-bottom-right-radius: 50% 10vw;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+        .content {
+            padding: 3rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .content h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #0077b6;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .slides {
+            display: none;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #023e8a;
+            color: white;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ade8f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body class="is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <div class="logo">
-                <span class="icon fa-clock"></span>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Cricket Club Logo">
+        <h1>University of Cincinnati Cricket Club</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#schedule">Practice Schedule</a>
+        <a href="#Leaders">Leaders</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Join Us</h1>
+        <p>We are building champions on and off the field</p>
+    </section>
+    <section class="content" id="about">
+        <h2>About Us</h2>
+        <p>The University of Cincinnati Cricket Club is dedicated to promoting cricket and nurturing talent at all levels.</p>
+        <p>We are based in the Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, fostering inclusivity while maintaining a competitive spirit.</p>
+        <p>We play regional leather ball cricket tournaments in Midwest (OH, IN, and KY), like the Midwest Cricket Tournament, and compete with teams across the region.</p>
+    </section>
+    <section class="content" id="highlights">
+        <h2>Highlights</h2>
+        <p>Our achievements include:</p>
+        <p>2023 T20 Division II Runners-up</p>
+        <p>2021 T35 Division II Runners-up</p>
+        <p>2011-2018 T35/T20 Playoffs</p>
+        <p>2010 T35 Division I Champions</p>
+    </section>
+    <section class="content" id="schedule">
+        <h2>Practice Schedule</h2>
+        <p>Join us for regular practice sessions:</p>
+        <p>Our season starts in mid-April and lasts until the end of October.</p>
+        <p>Fielding practice - Tuesdays 6PM at <a href="https://goo.gl/maps/XHLP8xE2rC72" target="_blank">Gettler Stadium, Cincinnati, OH</a></p>
+        <p>Batting/Bowling - Thursdays 5PM at <a href="https://goo.gl/maps/LBGwQcfoGoD3FiE49" target="_blank">Miami Meadows Park - 1546B OH-131, Milford, OH 45150</a></p>
+    </section>
+    <section class="content" id="Leaders">
+        <h2>Our Leaders</h2>
+        <p>Captain - Arth Ganatra</p>
+        <p>Vice Captain - Sudheer Bonthu</p>
+        <p>Treasurer - Yajuvendra Thakur</p>
+    </section>
+    <section class="content" id="gallery">
+        <h2>Gallery</h2>
+        <p>Explore moments from our matches and events.</p>
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="images/2022.PNG" alt="Gallery Image 1">
             </div>
-            <div class="content">
-                <div class="inner">
-                    <h1>University of Cincinnati Cricket Club</h1>
-                    <p>Our website is currently under construction and will be ready by <strong>Spring 2025</strong>. Thank you for your patience!</p>
-                </div>
+            <div class="slides">
+                <img src="images/2023.jpg" alt="Gallery Image 2">
             </div>
-        </header>
-
-        <!-- Main -->
-        <div id="main">
-            <article id="info">
-                <h2 class="major">Thank You!</h2>
-                <span class="image main"><img src="images/under-construction.jpg" alt="Under Construction" /></span>
-                <p>We’re working hard to bring you an amazing website. Check back soon for updates!</p>
-            </article>
+            <div class="slides">
+                <img src="images/2024.jpg" alt="Gallery Image 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+    </section>
+    <section class="content" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a> | Phone: +1-513-652-9429</p>
+        <p>Follow us on <a href="https://www.instagram.com/uccricketclub" target="_blank">Instagram</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 University of Cincinnati Cricket Club. All Rights Reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
 
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">&copy; 2024 University of Cincinnati Cricket Club.</p>
-            <p>Follow us on Instagram: 
-                <a href="https://www.instagram.com/uccricketclub" target="_blank">@uccricketclub</a>
-            </p>
-        </footer>
+        function showSlides() {
+            let slides = document.querySelectorAll(".slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
 
-    </div>
-
-    <!-- BG -->
-    <div id="bg"></div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+        function plusSlides(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+    </script>
 </body>
 </html>
