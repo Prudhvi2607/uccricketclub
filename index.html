@@ -7,11 +7,11 @@
   <link rel="icon" href="images/logo.jpg" type="image/jpg" />
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://uccricketclub.org",
-    "logo": "https://uccricketclub.org/images/logo.jpg",
-    "name": "University of Cincinnati Cricket Club"
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://uccricketclub.org",
+      "logo": "https://uccricketclub.org/images/logo.jpg",
+      "name": "University of Cincinnati Cricket Club"
   }
   </script>
   <style>
@@ -49,12 +49,11 @@
       justify-content: center;
       background: #0077b6;
       padding: 0.5rem;
-      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
-      margin: 0.5rem;
+      margin: 0 1rem;
       padding: 0.75rem 1.5rem;
       text-decoration: none;
       font-family: 'Raleway', sans-serif;
@@ -127,40 +126,26 @@
       cursor: pointer;
       position: absolute;
       top: 50%;
-      width: auto;
+      transform: translateY(-50%);
       padding: 16px;
-      margin-top: -22px;
       color: white;
       font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
+      font-size: 30px;
       user-select: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px;
     }
 
     .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+      right: 10px;
     }
 
     .prev:hover, .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .sponsors-grid {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .sponsors-grid img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      background-color: white;
     }
 
     footer {
@@ -191,6 +176,16 @@
         height: 100px;
       }
 
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
       .hero h1 {
         font-size: 2rem;
       }
@@ -205,6 +200,14 @@
 
       .content h2 {
         font-size: 1.5rem;
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+      }
+
+      .slides img {
+        border-radius: 4px;
       }
     }
 
@@ -238,7 +241,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.jpg" alt="Cricket Club Logo">
+    <img src="images/logo.jpg" alt="Cricket Club Logo" />
     <h1>University of Cincinnati Cricket Club</h1>
   </header>
 
@@ -261,11 +264,12 @@
     <h2>About the Club</h2>
     <p>The University of Cincinnati Cricket Club, established in 1989, is dedicated to promoting cricket and nurturing talent at all levels.</p>
     <p>We are based in Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, encouraging inclusivity while keeping a competitive spirit.</p>
-    <p>We play regional leather ball cricket tournaments in Midwest region (OH, IN, and KY), like the Midwest Cricket Tournament(MCT), and compete with teams across the region.</p>
+    <p>We play regional leather ball cricket tournaments in Midwest region (OH, IN, and KY), like the Midwest Cricket Tournament (MCT), and compete with teams across the region.</p>
   </section>
 
   <section class="content" id="highlights">
     <h2>Highlights</h2>
+    <p>Our achievements include:</p>
     <p>2024 MCT T35/T20 Playoffs</p>
     <p>2023 MCT T20 Runners-up</p>
     <p>2021 MCT T35 Runners-up</p>
@@ -274,9 +278,9 @@
 
   <section class="content" id="schedule">
     <h2>Practice Schedule</h2>
-    <p>Season: Mid-April – October</p>
-    <p>Fielding: Tuesdays 6PM at Gettler Stadium</p>
-    <p>Batting/Bowling: Thursdays 5PM at Miami Meadows Park, Milford, OH</p>
+    <p>Our season starts in mid-April and lasts until October.</p>
+    <p>Fielding practice - Tuesdays 6PM at Gettler Stadium, Cincinnati, OH</p>
+    <p>Batting/Bowling practice - Thursdays 5PM at Miami Meadows Park - 1546B OH-131, Milford, OH 45150</p>
   </section>
 
   <section class="content" id="club-leaders">
@@ -288,16 +292,16 @@
 
   <section class="content" id="team-leaders">
     <h2>Team Leaders</h2>
-    <div style="display: flex; justify-content: space-between;">
-      <div style="flex: 1;">
-        <h3>UCCC Wolves</h3>
-        <p>Captain - Arth Ganatra</p>
-        <p>Vice Captain - Yajuvendra Thakur</p>
+    <div class="teams-container" style="display: flex; justify-content: space-between;">
+      <div class="team" style="flex: 1;">
+        <h3 style="margin: 0;">UCCC Wolves</h3>
+        <p style="margin: 0;">Captain - Arth Ganatra</p>
+        <p style="margin: 0;">Vice Captain - Yajuvendra Thakur</p>
       </div>
-      <div style="flex: 1;">
-        <h3>UCCC Wolverines</h3>
-        <p>Captain - Sohith Talluri</p>
-        <p>Vice Captain - Padmanabhan Venkateeswaran</p>
+      <div class="team" style="flex: 1;">
+        <h3 style="margin: 0;">UCCC Wolverines</h3>
+        <p style="margin: 0;">Captain - Padmanabhan Venkateeswaran</p>
+        <p style="margin: 0;">Vice Captain - Sanath Sunny</p>
       </div>
     </div>
   </section>
@@ -315,16 +319,17 @@
 
   <section class="content" id="sponsors">
     <h2>Our Sponsors</h2>
-    <div class="sponsors-grid">
-      <img src="images/sponsor1-jcsoni.png" alt="Sponsor 1" />
-      <img src="images/sponsor2-nazly.png" alt="Sponsor 2" />
+    <div class="slideshow-container">
+      <div class="slides"><img src="images/sponsor1-jcsoni.png" alt="Sponsor 1" /></div>
+      <div class="slides"><img src="images/sponsor2-nazly.png" alt="Sponsor 2" /></div>
+      <a class="prev" onclick="plusSponsorSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSponsorSlides(1)">&#10095;</a>
     </div>
   </section>
 
   <section class="content" id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a></p>
-    <p>Phone: +1-513-652-9429</p>
+    <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a> | Phone: +1-513-652-9429</p>
     <p>Follow us on <a href="https://www.instagram.com/uccricketclub" target="_blank">Instagram</a></p>
   </section>
 
@@ -333,11 +338,10 @@
   </footer>
 
   <script>
+    // Gallery slideshow
     let slideIndex = 0;
-    let slides;
-
     function showSlides() {
-      slides = document.querySelectorAll(".slides");
+      let slides = document.querySelectorAll("#gallery .slides");
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
@@ -346,18 +350,33 @@
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 5000);
     }
-
     function plusSlides(n) {
       slideIndex += n - 1;
-      if (slideIndex < 1) slideIndex = slides.length;
-      if (slideIndex > slides.length) slideIndex = 1;
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex - 1].style.display = "block";
+      showSlides();
     }
 
-    window.onload = showSlides;
+    // Sponsors slideshow
+    let sponsorIndex = 0;
+    function showSponsorSlides() {
+      let sponsorSlides = document.querySelectorAll("#sponsors .slides");
+      for (let i = 0; i < sponsorSlides.length; i++) {
+        sponsorSlides[i].style.display = "none";
+      }
+      sponsorIndex++;
+      if (sponsorIndex > sponsorSlides.length) sponsorIndex = 1;
+      sponsorSlides[sponsorIndex - 1].style.display = "block";
+      setTimeout(showSponsorSlides, 5000);
+    }
+    function plusSponsorSlides(n) {
+      sponsorIndex += n - 1;
+      showSponsorSlides();
+    }
+
+    // Init both slideshows
+    window.onload = function () {
+      showSlides();
+      showSponsorSlides();
+    };
   </script>
 </body>
 </html>
