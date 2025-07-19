@@ -45,11 +45,12 @@
             display: flex;
             justify-content: center;
             background: #0077b6;
+            flex-wrap: wrap;
             padding: 0.5rem;
         }
         nav a {
             color: white;
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
             font-family: 'Raleway', sans-serif;
@@ -99,18 +100,13 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        .slides,
-        .sponsor-slide {
+        .slides, .sponsor-slide {
             display: none;
         }
-        .slides img,
-        .sponsor-slide img {
+        .slides img, .sponsor-slide img {
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: white;
-            padding: 1rem;
-            object-fit: contain;
         }
         .prev, .next {
             cursor: pointer;
@@ -148,64 +144,20 @@
         footer a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
-            header {
-                font-size: 1.5rem;
-                padding: 1rem;
-            }
-            header img {
-                height: 100px;
-            }
-            nav {
-                flex-wrap: wrap;
-            }
-            nav a {
-                margin: 0.5rem;
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .content {
-                padding: 1.5rem;
-            }
-            .content h2 {
-                font-size: 1.5rem;
-            }
-            .slideshow-container {
-                max-width: 100%;
-            }
-            .slides img,
-            .sponsor-slide img {
-                border-radius: 4px;
-            }
+            header img { height: 100px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .content { padding: 1.5rem; }
+            .content h2 { font-size: 1.5rem; }
         }
-
         @media (max-width: 480px) {
-            nav a {
-                padding: 0.3rem 0.5rem;
-                font-size: 0.8rem;
-            }
-            .hero {
-                padding: 2rem 1rem;
-            }
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-            .hero p {
-                font-size: 0.9rem;
-            }
-            .content {
-                padding: 1rem;
-            }
-            footer {
-                font-size: 0.8rem;
-            }
+            nav a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+            .hero { padding: 2rem 1rem; }
+            .hero h1 { font-size: 1.5rem; }
+            .hero p { font-size: 0.9rem; }
+            .content { padding: 1rem; }
+            footer { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -230,12 +182,10 @@
     <section class="content" id="about">
         <h2>About the Club</h2>
         <p>The University of Cincinnati Cricket Club, established in 1989, is dedicated to promoting cricket and nurturing talent at all levels.</p>
-        <p>We are based in Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, encouraging inclusivity while keeping a competitive spirit.</p>
-        <p>We play regional leather ball cricket tournaments in Midwest region (OH, IN, and KY), like the Midwest Cricket Tournament(MCT), and compete with teams across the region.</p>
+        <p>We welcome players of all skill levels and compete in regional leather ball cricket tournaments like MCT.</p>
     </section>
     <section class="content" id="highlights">
         <h2>Highlights</h2>
-        <p>Our achievements include:</p>
         <p>2024 MCT T35/T20 Playoffs</p>
         <p>2023 MCT T20 Runners-up</p>
         <p>2021 MCT T35 Runners-up</p>
@@ -243,105 +193,87 @@
     </section>
     <section class="content" id="schedule">
         <h2>Practice Schedule</h2>
-        <p>Our season starts in mid-April and lasts until October.</p>
-        <p>Fielding practice - Tuesdays 6PM at Gettler Stadium, Cincinnati, OH</p>
-        <p>Batting/Bowling practice - Thursdays 5PM at Miami Meadows Park - 1546B OH-131, Milford, OH 45150</p>
+        <p>Season: Mid-April to October</p>
+        <p>Fielding: Tuesdays 6PM – Gettler Stadium</p>
+        <p>Batting/Bowling: Thursdays 5PM – Miami Meadows Park</p>
     </section>
     <section class="content" id="club-leaders">
         <h2>Board Members</h2>
         <p>President - Prudhvi Bhimavarapu</p>
-        <p>Treasurer and Operations Manager - Rishi Mishra</p>
+        <p>Treasurer - Rishi Mishra</p>
         <p>Student President - Tanishq Jadhav</p>
     </section>
-    <section class="content" id="team-leaders">
+    <section class="content">
         <h2>Team Leaders</h2>
-        <div class="teams-container" style="display: flex; justify-content: space-between;">
-            <div class="team" style="flex: 1;">
-                <h3 style="margin: 0; padding: 0;">UCCC Wolves</h3>
-                <p style="margin: 0; padding: 0;">Captain - Arth Ganatra</p>
-                <p style="margin: 0; padding: 0;">Vice Captain - Yajuvendra Thakur</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1;">
+                <h3>UCCC Wolves</h3>
+                <p>Captain - Arth Ganatra</p>
+                <p>Vice Captain - Yajuvendra Thakur</p>
             </div>
-            <div class="team" style="flex: 1;">
-                <h3 style="margin: 0; padding: 0;">UCCC Wolverines</h3>
-                <p style="margin: 0; padding: 0;">Captain - Padmanabhan Venkateeswaran</p>
-                <p style="margin: 0; padding: 0;">Vice Captain - Sanath Sunny</p>
+            <div style="flex: 1;">
+                <h3>UCCC Wolverines</h3>
+                <p>Captain - Sohith Talluri</p>
+                <p>Vice Captain - Padmanabhan Venkateeswaran</p>
             </div>
         </div>
     </section>
     <section class="content" id="gallery">
         <h2>Gallery</h2>
         <div class="slideshow-container">
-            <div class="slides">
-                <img src="images/2022.PNG" alt="Gallery Image 1">
-            </div>
-            <div class="slides">
-                <img src="images/2023.jpg" alt="Gallery Image 2">
-            </div>
-            <div class="slides">
-                <img src="images/2024.jpg" alt="Gallery Image 3">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slides"><img src="images/2022.PNG" alt="Gallery Image 1"></div>
+            <div class="slides"><img src="images/2023.jpg" alt="Gallery Image 2"></div>
+            <div class="slides"><img src="images/2024.jpg" alt="Gallery Image 3"></div>
+            <a class="prev" onclick="plusGallerySlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusGallerySlides(1)">&#10095;</a>
         </div>
     </section>
     <section class="content" id="sponsors">
         <h2>Our Sponsors</h2>
-        <div class="slideshow-container" id="sponsor-slideshow">
-            <div class="sponsor-slide">
-                <img src="images/sponsor1-jcsoni.png" alt="Sponsor 1">
-            </div>
-            <div class="sponsor-slide">
-                <img src="images/sponsor2-nazly.png" alt="Sponsor 2">
-            </div>
+        <div class="slideshow-container">
+            <div class="sponsor-slide"><img src="images/sponsor1.png" alt="Sponsor 1"></div>
+            <div class="sponsor-slide"><img src="images/sponsor2.png" alt="Sponsor 2"></div>
             <a class="prev" onclick="plusSponsorSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSponsorSlides(1)">&#10095;</a>
         </div>
     </section>
     <section class="content" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a> | Phone: +1-513-652-9429</p>
-        <p>Follow us on <a href="https://www.instagram.com/uccricketclub" target="_blank">Instagram</a></p>
+        <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a></p>
+        <p>Phone: +1-513-652-9429</p>
+        <p>Instagram: <a href="https://www.instagram.com/uccricketclub" target="_blank">@uccricketclub</a></p>
     </section>
     <footer>
         <p>&copy; 2025 University of Cincinnati Cricket Club. All Rights Reserved.</p>
     </footer>
-    <script>
-        let slideIndex = 0;
-        showSlides();
 
-        function showSlides() {
-            let slides = document.querySelectorAll(".slides");
+    <script>
+        // Gallery Slideshow
+        let galleryIndex = 1;
+        showGallerySlides(galleryIndex);
+        function plusGallerySlides(n) { showGallerySlides(galleryIndex += n); }
+        function showGallerySlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) { galleryIndex = 1; }
+            if (n < 1) { galleryIndex = slides.length; }
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000);
+            slides[galleryIndex - 1].style.display = "block";
         }
 
-        function plusSlides(n) {
-            slideIndex += n - 1;
-            showSlides();
-        }
-
-        let sponsorIndex = 0;
-        showSponsorSlides();
-
-        function showSponsorSlides() {
-            let sponsorSlides = document.querySelectorAll("#sponsor-slideshow .sponsor-slide");
-            for (let i = 0; i < sponsorSlides.length; i++) {
-                sponsorSlides[i].style.display = "none";
+        // Sponsors Slideshow
+        let sponsorIndex = 1;
+        showSponsorSlides(sponsorIndex);
+        function plusSponsorSlides(n) { showSponsorSlides(sponsorIndex += n); }
+        function showSponsorSlides(n) {
+            let slides = document.getElementsByClassName("sponsor-slide");
+            if (n > slides.length) { sponsorIndex = 1; }
+            if (n < 1) { sponsorIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            sponsorIndex++;
-            if (sponsorIndex > sponsorSlides.length) { sponsorIndex = 1; }
-            sponsorSlides[sponsorIndex - 1].style.display = "block";
-            setTimeout(showSponsorSlides, 5000);
-        }
-
-        function plusSponsorSlides(n) {
-            sponsorIndex += n - 1;
-            showSponsorSlides();
+            slides[sponsorIndex - 1].style.display = "block";
         }
     </script>
 </body>
