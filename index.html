@@ -99,13 +99,18 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        .slides {
+        .slides,
+        .sponsor-slide {
             display: none;
         }
-        .slides img {
+        .slides img,
+        .sponsor-slide img {
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 1rem;
+            object-fit: contain;
         }
         .prev, .next {
             cursor: pointer;
@@ -175,7 +180,8 @@
             .slideshow-container {
                 max-width: 100%;
             }
-            .slides img {
+            .slides img,
+            .sponsor-slide img {
                 border-radius: 4px;
             }
         }
@@ -214,6 +220,7 @@
         <a href="#schedule">Practice Schedule</a>
         <a href="#club-leaders">Leaders</a>
         <a href="#gallery">Gallery</a>
+        <a href="#sponsors">Sponsors</a>
         <a href="#contact">Contact</a>
     </nav>
     <section class="hero">
@@ -247,19 +254,19 @@
         <p>Student President - Tanishq Jadhav</p>
     </section>
     <section class="content" id="team-leaders">
-        <h2>Team Leaders</h2>
-        <div class="teams-container" style="display: flex; justify-content: space-between;">
-            <div class="team" style="flex: 1;">
-                <h3 style="margin: 0; padding: 0;">UCCC Wolves</h3>
-                <p style="margin: 0; padding: 0;">Captain - Arth Ganatra</p>
-                <p style="margin: 0; padding: 0;">Vice Captain - Yajuvendra Thakur</p>
-            </div>
-            <div class="team" style="flex: 1;">
-                <h3 style="margin: 0; padding: 0;">UCCC Wolverines</h3>
-                <p style="margin: 0; padding: 0;">Captain - Sohith Talluri</p>
-                <p style="margin: 0; padding: 0;">Vice Captain - Padmanabhan Venkateeswaran</p>
-            </div>
-        </div>
+        <h2>Team Leaders</h2>
+        <div class="teams-container" style="display: flex; justify-content: space-between;">
+            <div class="team" style="flex: 1;">
+                <h3 style="margin: 0; padding: 0;">UCCC Wolves</h3>
+                <p style="margin: 0; padding: 0;">Captain - Arth Ganatra</p>
+                <p style="margin: 0; padding: 0;">Vice Captain - Yajuvendra Thakur</p>
+            </div>
+            <div class="team" style="flex: 1;">
+                <h3 style="margin: 0; padding: 0;">UCCC Wolverines</h3>
+                <p style="margin: 0; padding: 0;">Captain - Padmanabhan Venkateeswaran</p>
+                <p style="margin: 0; padding: 0;">Vice Captain - Sanath Sunny</p>
+            </div>
+        </div>
     </section>
     <section class="content" id="gallery">
         <h2>Gallery</h2>
@@ -275,6 +282,19 @@
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    <section class="content" id="sponsors">
+        <h2>Our Sponsors</h2>
+        <div class="slideshow-container" id="sponsor-slideshow">
+            <div class="sponsor-slide">
+                <img src="images/sponsor1-jcsoni.png" alt="Sponsor 1">
+            </div>
+            <div class="sponsor-slide">
+                <img src="images/sponsor2-nazly.png" alt="Sponsor 2">
+            </div>
+            <a class="prev" onclick="plusSponsorSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSponsorSlides(1)">&#10095;</a>
         </div>
     </section>
     <section class="content" id="contact">
@@ -297,12 +317,31 @@
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+            setTimeout(showSlides, 5000);
         }
 
         function plusSlides(n) {
             slideIndex += n - 1;
             showSlides();
+        }
+
+        let sponsorIndex = 0;
+        showSponsorSlides();
+
+        function showSponsorSlides() {
+            let sponsorSlides = document.querySelectorAll("#sponsor-slideshow .sponsor-slide");
+            for (let i = 0; i < sponsorSlides.length; i++) {
+                sponsorSlides[i].style.display = "none";
+            }
+            sponsorIndex++;
+            if (sponsorIndex > sponsorSlides.length) { sponsorIndex = 1; }
+            sponsorSlides[sponsorIndex - 1].style.display = "block";
+            setTimeout(showSponsorSlides, 5000);
+        }
+
+        function plusSponsorSlides(n) {
+            sponsorIndex += n - 1;
+            showSponsorSlides();
         }
     </script>
 </body>
