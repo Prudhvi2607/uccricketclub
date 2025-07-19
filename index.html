@@ -166,6 +166,41 @@
       text-decoration: underline;
     }
 
+    /* --- Team Leaders Section Styles --- */
+    .teams-container {
+        display: flex;
+        justify-content: center; /* Centers the whole block of teams */
+        gap: 80px; /* Space between the two team blocks */
+        /* Removed flex-wrap: wrap; to ensure they stay on one line */
+    }
+
+    .team {
+        /* flex: 1; Removed this as it can cause issues with content-based width */
+        width: auto; /* Allow content to dictate width */
+        padding: 15px; /* Add some padding inside the team box */
+        text-align: center; /* Center align text within each team */
+    }
+
+    .team-name {
+        margin-top: 0;
+        margin-bottom: 10px; /* Space below the team name */
+        font-size: 1.2em; /* Make team names slightly larger */
+        color: #333; /* Darker color for team names */
+    }
+
+    .team-member {
+        margin-top: 0;
+        margin-bottom: 5px; /* Space between captain and vice-captain */
+        line-height: 1.5; /* Improve line spacing */
+        color: #555; /* Slightly lighter color for team members */
+    }
+
+    .team-member:last-child {
+        margin-bottom: 0; /* No margin below the last member in each team block */
+    }
+    /* --- End Team Leaders Section Styles --- */
+
+
     @media (max-width: 768px) {
       header {
         font-size: 1.5rem;
@@ -208,6 +243,17 @@
 
       .slides img {
         border-radius: 4px;
+      }
+
+      /* MEDIA QUERY ADJUSTMENT for Team Leaders */
+      /* For smaller screens, it's better to stack them again */
+      .teams-container {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Center stacked items */
+        gap: 20px; /* Adjust gap for vertical stacking */
+      }
+      .team {
+        width: 80%; /* Give stacked items some width for better appearance */
       }
     }
 
