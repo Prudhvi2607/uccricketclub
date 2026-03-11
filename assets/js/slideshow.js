@@ -1,63 +1,58 @@
-function initSlideshow(sectionId, dotsContainerId, prevFnName, nextFnName) {
-  const slides = document.querySelectorAll(`#${sectionId} .slides`);
-  const dotsContainer = document.getElementById(dotsContainerId);
-  let index = 0;
-  let timer;
+// GALLERY SLIDESHOW
+let galleryIndex = 0;
+let gallerySlides = document.querySelectorAll('#gallery .slides');
+let galleryTimer;
 
-  // Build dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => {
-      clearTimeout(timer);
-      show(i);
-      timer = setTimeout(auto, 5000);
-    });
-    dotsContainer.appendChild(dot);
-  });
+function showGallerySlide(n) {
+  if (n >= gallerySlides.length) galleryIndex = 0;
+  else if (n < 0) galleryIndex = gallerySlides.length - 1;
+  else galleryIndex = n;
 
-  function updateDots() {
-    dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
-      d.classList.toggle('active', i === index);
-    });
-  }
-
-  function show(n) {
-    if (n >= slides.length) index = 0;
-    else if (n < 0) index = slides.length - 1;
-    else index = n;
-    slides.forEach(s => s.style.display = 'none');
-    slides[index].style.display = 'block';
-    updateDots();
-  }
-
-  function auto() {
-    show(index + 1);
-    timer = setTimeout(auto, 5000);
-  }
-
-  function prev() {
-    clearTimeout(timer);
-    show(index - 1);
-    timer = setTimeout(auto, 5000);
-  }
-
-  function next() {
-    clearTimeout(timer);
-    show(index + 1);
-    timer = setTimeout(auto, 5000);
-  }
-
-  show(0);
-  timer = setTimeout(auto, 5000);
-
-  return { prev, next };
+  gallerySlides.forEach(slide => slide.style.display = 'none');
+  gallerySlides[galleryIndex].style.display = 'block';
 }
 
-window.addEventListener('load', function () {
-  const gallery = initSlideshow('gallery', 'gallery-dots');
-  const sponsors = initSlideshow('sponsors', 'sponsor-dots');
+function autoGallerySlides() {
+  showGallerySlide(galleryIndex + 1);
+  galleryTimer = setTimeout(autoGallerySlides, 5000);
+}
 
-  window.plusSlides = (n) => n < 0 ? gallery.prev() : gallery.next();
-  window.plusSponsorSlides = (n) => n < 0 ? sponsors.prev() : sponsors.next();
+function plusSlides(n) {
+  clearTimeout(galleryTimer);
+  showGallerySlide(galleryIndex + n);
+  galleryTimer = setTimeout(autoGallerySlides, 5000);
+}
+
+// SPONSOR SLIDESHOW
+let sponsorIndex = 0;
+let sponsorSlides = document.querySelectorAll('#sponsors .slides');
+let sponsorTimer;
+
+function showSponsorSlide(n) {
+  if (n >= sponsorSlides.length) sponsorIndex = 0;
+  else if (n < 0) sponsorIndex = sponsorSlides.length - 1;
+  else sponsorIndex = n;
+
+  sponsorSlides.forEach(slide => slide.style.display = 'none');
+  sponsorSlides[sponsorIndex].style.display = 'block';
+}
+
+function autoSponsorSlides() {
+  showSponsorSlide(sponsorIndex + 1);
+  sponsorTimer = setTimeout(autoSponsorSlides, 5000);
+}
+
+function plusSponsorSlides(n) {
+  clearTimeout(sponsorTimer);
+  showSponsorSlide(sponsorIndex + n);
+  sponsorTimer = setTimeout(autoSponsorSlides, 5000);
+}
+
+// INIT
+window.addEventListener('load', function () {
+  showGallerySlide(galleryIndex);
+  autoGallerySlides();
+
+  showSponsorSlide(sponsorIndex);
+  autoSponsorSlides();
 });
