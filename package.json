@@ -1,0 +1,12 @@
+{
+  "name": "uccricketclub",
+  "version": "1.0.0",
+  "description": "University of Cincinnati Cricket Club website",
+  "scripts": {
+    "build:css": "sass assets/sass/main.scss assets/css/main.css",
+    "watch:css": "sass --watch assets/sass/main.scss assets/css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
