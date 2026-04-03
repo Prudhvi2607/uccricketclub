@@ -384,7 +384,7 @@ body {
   height: 650px;
   display: block;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .prev, .next {
