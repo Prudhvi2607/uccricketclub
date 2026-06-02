@@ -44,9 +44,10 @@
       <div class="navbar-links">
         <a href="#about">About</a>
         <a href="#highlights">Highlights</a>
-        <a href="#practice">Practice</a>
+        <a href="#schedule">Schedule</a>
         <a href="#leaders">Leaders</a>
         <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a href="https://app.uccricketclub.org" target="_blank" class="btn-primary">Club-OS Portal →</a>
       </div>
@@ -55,9 +56,10 @@
     <div class="navbar-mobile" id="mobile-menu">
       <a href="#about" onclick="toggleMenu()">About</a>
       <a href="#highlights" onclick="toggleMenu()">Highlights</a>
-      <a href="#practice" onclick="toggleMenu()">Practice</a>
+      <a href="#schedule" onclick="toggleMenu()">Schedule</a>
       <a href="#leaders" onclick="toggleMenu()">Leaders</a>
       <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
       <a href="#contact" onclick="toggleMenu()">Contact</a>
       <a href="https://app.uccricketclub.org" target="_blank" class="btn-primary">Club-OS Portal →</a>
     </div>
@@ -108,23 +110,44 @@
     </div>
   </section>
 
-  <!-- Practice Info -->
-  <section class="section" id="practice">
+  <!-- Schedule -->
+  <section class="section" id="schedule">
     <div class="container">
-      <h2>Practice Info</h2>
-      <p>Our season runs from <strong>April to October</strong>.</p>
-      <div class="cards">
-        <div class="card">
-          <span class="card-label">Fielding Practice</span>
-          <p><strong>Tuesdays 6 PM</strong></p>
-          <p class="card-meta">Gettler Stadium, Cincinnati, OH</p>
+      <h2>Club Schedule</h2>
+      <p>Stay up to date with our practices, games, and club events throughout the season.</p>
+
+      <div class="cal-toolbar">
+        <div class="cal-legend">
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-practice"></span>Practice</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-game"></span>Game</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-social"></span>Social</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-cancelled"></span>Cancelled</span>
         </div>
-        <div class="card">
-          <span class="card-label">Batting &amp; Bowling</span>
-          <p><strong>Thursdays 5 PM</strong></p>
-          <p class="card-meta">Miami Meadows Park, 1546B OH-131, Milford, OH 45150</p>
+        <span id="cal-season-badge" class="cal-season-badge"></span>
+      </div>
+
+      <div class="cal-layout">
+        <div class="cal-panel">
+          <div class="cal-header">
+            <button class="cal-nav" id="cal-prev" aria-label="Previous month">&#8249;</button>
+            <span class="cal-month-label" id="cal-month-label"></span>
+            <button class="cal-nav" id="cal-next" aria-label="Next month">&#8250;</button>
+            <button class="cal-today-btn" id="cal-today-btn">Today</button>
+          </div>
+          <div class="cal-grid-head">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+            <span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+        </div>
+
+        <div class="cal-sidebar">
+          <div class="cal-sidebar-head">Upcoming</div>
+          <div id="cal-upcoming"></div>
         </div>
       </div>
+
+      <div class="cal-detail" id="cal-detail" style="display:none"></div>
     </div>
   </section>
 
@@ -135,15 +158,15 @@
       <div class="cards">
         <div class="card">
           <span class="card-label">President</span>
-          <p><strong>Prudhvi Bhimavarapu</strong></p>
+          <p>Prudhvi Bhimavarapu</p>
         </div>
         <div class="card">
           <span class="card-label">Treasurer &amp; Operations</span>
-          <p><strong>Rishi Mishra</strong></p>
+          <p>Rishi Mishra</p>
         </div>
         <div class="card">
           <span class="card-label">Student President</span>
-          <p><strong>Tanishq Jadhav</strong></p>
+          <p>Tanishq Jadhav</p>
         </div>
       </div>
 
@@ -151,13 +174,13 @@
       <div class="cards">
         <div class="card">
           <span class="card-label-lg">UCCC Wolverines</span>
-          <p><strong>Captain</strong> — Arth Ganatra</p>
-          <p><strong>Vice Captain</strong> — Prem Kumar Maloth</p>
+          <p><strong>Captain</strong> - Arth Ganatra</p>
+          <p><strong>Vice Captain</strong> - Prem Kumar Maloth</p>
         </div>
         <div class="card">
           <span class="card-label-lg">UCCC Wolves</span>
-          <p><strong>Captain</strong> — Sanath Sunny</p>
-          <p><strong>Vice Captain</strong> — Amritpal Singh</p>
+          <p><strong>Captain</strong> - Sanath Sunny</p>
+          <p><strong>Vice Captain</strong> - Sai Nikhil Musthyala</p>
         </div>
       </div>
     </div>
@@ -201,8 +224,88 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I join the club?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Simple - just show up to a practice! All our practices are listed in the <a href="#schedule">Club Schedule</a> above, so feel free to come out to any one of them. Once you show some interest and attend a practice, we'll warmly welcome you into our WhatsApp group where all club communication happens. And don't hesitate to reach out via email or Instagram if you have any questions beforehand - we're always happy to help.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need prior cricket experience?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Not at all. We welcome players of all skill levels, from complete beginners to seasoned players.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What equipment do I need to bring?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Just yourself to start. We have shared equipment available at practices. As you get more involved, you may want your own bat and other kit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is the club open to non-UC students?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! Most of us are UC students and alumni, with a good number of non-UC folks as well - so you'll fit right in either way. We're a welcoming group and you definitely won't feel out of place.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does it cost to be a member?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>There is a membership fee that helps cover tournament registration and other expenses - but you don't need to pay anything to attend practices. Take your time, get a feel for the club, and see if it's the right fit for you. Thanks to our wonderful sponsors, we're proud to offer some of the best membership rates around. Reach out to any of our board members or team leaders for pricing details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Where do you play games and tournaments?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>We compete in the Midwest Cricket Tournament (MCT) and other regional tournaments across Ohio, Indiana, and Kentucky. Our home games are played in Milford, OH.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does the club play tennis ball tournaments?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Unfortunately no - we play leather ball cricket. That said, many of our members also play tennis ball cricket with various community teams. You're welcome to join us at practice and chat with them to find the right fit for you!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section class="section" id="contact">
+  <section class="section section-alt" id="contact">
     <div class="container">
       <h2>Contact Us</h2>
       <div class="cards">
@@ -226,10 +329,18 @@
   </footer>
 
   <script src="assets/js/slideshow.js"></script>
+  <script src="assets/js/calendar.js"></script>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('open');
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
     }
   </script>
 </body>
