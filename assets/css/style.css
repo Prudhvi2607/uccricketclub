@@ -246,6 +246,13 @@ body {
 
 .section-alt .card { background: var(--white); }
 
+.card-champion {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+.card-champion .card-label { color: #92400e; }
+.card-champion p strong { color: #92400e; }
+
 .card p {
   margin: 0 0 0.35rem;
   color: var(--zinc-700);
