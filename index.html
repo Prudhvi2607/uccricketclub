@@ -14,114 +14,338 @@
       "name": "University of Cincinnati Cricket Club"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .sponsor-img-wrap {
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sponsor-img-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="images/logo.jpg" alt="Cricket Club Logo" />
-    <h1>University of Cincinnati Cricket Club</h1>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#practice">Practice Info</a>
-    <a href="#club-leaders">Leaders</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#contact">Contact</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <img src="images/logo.jpg" alt="UCCC Logo" />
+        <span>UC Cricket Club</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#leaders">Leaders</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="https://app.uccricketclub.org" target="_blank" class="btn-primary">Club-OS Portal →</a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="navbar-mobile" id="mobile-menu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#highlights" onclick="toggleMenu()">Highlights</a>
+      <a href="#schedule" onclick="toggleMenu()">Schedule</a>
+      <a href="#leaders" onclick="toggleMenu()">Leaders</a>
+      <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+      <a href="https://app.uccricketclub.org" target="_blank" class="btn-primary">Club-OS Portal →</a>
+    </div>
   </nav>
 
+  <!-- Hero -->
   <section class="hero">
-    <h1>Join Us</h1>
-    <p>We are building champions on and off the field</p>
+    <div class="hero-inner">
+      <p class="hero-tag">Est. 1989 · Cincinnati, OH</p>
+      <h1>University of Cincinnati<br>Cricket Club</h1>
+      <p class="hero-sub">Building champions on and off the field</p>
+      <a href="#about" class="btn-secondary">Learn More</a>
+    </div>
   </section>
 
-  <section class="content" id="about">
-    <h2>About the Club</h2>
-    <p>The University of Cincinnati Cricket Club, established in 1989, is dedicated to promoting cricket and nurturing talent at all levels.</p>
-    <p>We are based in Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, encouraging inclusivity while keeping a competitive spirit.</p>
-    <p>We play regional leather ball cricket tournaments in Midwest region (OH, IN, and KY), like the Midwest Cricket Tournament (MCT), and compete with teams across the region.</p>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2>About the Club</h2>
+      <p>The University of Cincinnati Cricket Club, established in 1989, is dedicated to promoting cricket and nurturing talent at all levels.</p>
+      <p>We are based in Cincinnati, Ohio and aim to promote cricket within the local and student communities. We welcome players of all skill levels, encouraging inclusivity while keeping a competitive spirit.</p>
+      <p>We play regional leather ball cricket tournaments in the Midwest region (OH, IN, and KY), like the Midwest Cricket Tournament (MCT), and compete with teams across the region.</p>
+    </div>
   </section>
 
-  <section class="content" id="highlights">
-    <h2>Highlights</h2>
-    <p>Our achievements include:</p>
-    <p><strong>🏆 2026 MCT T20 Champions</strong></p>
-    <p>2025 MCT T40/T20 Playoffs</p>
-    <p>2024 MCT T35/T20 Playoffs</p>
-    <p>2023 MCT T20 Runners-up</p>
-    <p>2021 MCT T35 Runners-up</p>
-  </section>
-
-  <section class="content" id="practice">
-    <h2>Practice Info</h2>
-    <p>Our season starts in April and lasts until October.</p>
-    <p>Fielding practice - Tuesdays 6 PM at Gettler Stadium, Cincinnati, OH</p>
-    <p>Batting/Bowling practice - Thursdays 5 PM at Miami Meadows Park - 1546B OH-131, Milford, OH 45150</p>
-  </section>
-
-  <section class="content" id="club-leaders">
-    <h2>Board Members</h2>
-    <p>President - Prudhvi Bhimavarapu</p>
-    <p>Treasurer and Operations Manager - Rishi Mishra</p>
-    <p>Student President - Tanishq Jadhav</p>
-  </section>
-  
-  <section class="content" id="team-leaders">
-    <h2>Team Leaders</h2>
-    <div class="teams-container">
-      <div class="team">
-        <h3 class="team-name">UCCC Wolves</h3>
-        <p class="team-member">Captain - Arth Ganatra</p>
-        <p class="team-member">Vice Captain - Prem Kumar Maloth</p>
-      </div>
-      <div class="team">
-        <h3 class="team-name">UCCC Wolverines</h3>
-        <p class="team-member">Captain - Sanath Sunny</p>
-        <p class="team-member">Vice Captain - Amritpal Singh</p>
+  <!-- Highlights -->
+  <section class="section section-alt" id="highlights">
+    <div class="container">
+      <h2>Highlights</h2>
+      <div class="cards">
+        <div class="card card-champion">
+          <span class="card-label">🏆 2026</span>
+          <p><strong>MCT T20 Champions</strong></p>
+        </div>
+        <div class="card">
+          <span class="card-label">2025</span>
+          <p>MCT T40 &amp; T20 Playoffs</p>
+        </div>
+        <div class="card">
+          <span class="card-label">2024</span>
+          <p>MCT T35 &amp; T20 Playoffs</p>
+        </div>
+        <div class="card">
+          <span class="card-label">2023</span>
+          <p>MCT T20 Runners-up</p>
+        </div>
+        <div class="card">
+          <span class="card-label">2021</span>
+          <p>MCT T35 Runners-up</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="content" id="gallery">
-    <h2>Gallery</h2>
-    <div class="slideshow-container">
-      <div class="slides"><img src="images/2022.PNG" alt="Gallery Image 1" /></div>
-      <div class="slides"><img src="images/2023.jpg" alt="Gallery Image 2" /></div>
-      <div class="slides"><img src="images/2024.jpg" alt="Gallery Image 3" /></div>
-      <div class="slides"><img src="images/2025-1.jpg" alt="Gallery Image 3" /></div>
-      <div class="slides"><img src="images/2025-2.jpg" alt="Gallery Image 3" /></div>
-      <div class="slides"><img src="images/2025-3.jpg" alt="Gallery Image 3" /></div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <!-- Schedule -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <h2>Club Schedule</h2>
+      <p>Stay up to date with our practices, games, and club events throughout the season.</p>
+
+      <div class="cal-toolbar">
+        <div class="cal-legend">
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-practice"></span>Practice</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-game"></span>Game</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-social"></span>Social</span>
+          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-cancelled"></span>Cancelled</span>
+        </div>
+        <span id="cal-season-badge" class="cal-season-badge"></span>
+      </div>
+
+      <div class="cal-layout">
+        <div class="cal-panel">
+          <div class="cal-header">
+            <button class="cal-nav" id="cal-prev" aria-label="Previous month">&#8249;</button>
+            <span class="cal-month-label" id="cal-month-label"></span>
+            <button class="cal-nav" id="cal-next" aria-label="Next month">&#8250;</button>
+            <button class="cal-today-btn" id="cal-today-btn">Today</button>
+          </div>
+          <div class="cal-grid-head">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+            <span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+        </div>
+
+        <div class="cal-sidebar">
+          <div class="cal-sidebar-head">Upcoming</div>
+          <div id="cal-upcoming"></div>
+        </div>
+      </div>
+
+      <div class="cal-detail" id="cal-detail" style="display:none"></div>
     </div>
   </section>
 
-  <section class="content" id="sponsors">
-    <h2>Our Sponsors</h2>
-    <div class="slideshow-container">
-      <div class="slides"><img src="images/sponsor1-jcsoni.png" alt="Sponsor 1" /></div>
-      <div class="slides"><img src="images/sponsor2-nazly.png" alt="Sponsor 2" /></div>
-      <a class="prev" onclick="plusSponsorSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSponsorSlides(1)">&#10095;</a>
+  <!-- Leaders -->
+  <section class="section section-alt" id="leaders">
+    <div class="container">
+      <h2>Board Members</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-label">President</span>
+          <p>Prudhvi Bhimavarapu</p>
+        </div>
+        <div class="card">
+          <span class="card-label">Treasurer &amp; Operations</span>
+          <p>Rishi Mishra</p>
+        </div>
+        <div class="card">
+          <span class="card-label">Student President</span>
+          <p>Tanishq Jadhav</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:2.5rem">Team Leaders</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-label-lg">UCCC Wolverines</span>
+          <p><strong>Captain</strong> - Arth Ganatra</p>
+          <p><strong>Vice Captain</strong> - Prem Kumar Maloth</p>
+        </div>
+        <div class="card">
+          <span class="card-label-lg">UCCC Wolves</span>
+          <p><strong>Captain</strong> - Sanath Sunny</p>
+          <p><strong>Vice Captain</strong> - Sai Nikhil Musthyala</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="content" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a></p>
-    <p>Follow us on <a href="https://www.instagram.com/uccricketclub" target="_blank">Instagram</a></p>
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="slideshow-container">
+        <div class="slides"><img src="images/2022.PNG" alt="2022" /></div>
+        <div class="slides"><img src="images/2023.jpg" alt="2023" /></div>
+        <div class="slides"><img src="images/2024.jpg" alt="2024" /></div>
+        <div class="slides"><img src="images/2025-1.jpg" alt="2025" /></div>
+        <div class="slides"><img src="images/2025-2.jpg" alt="2025" /></div>
+        <div class="slides"><img src="images/2025-3.jpg" alt="2025" /></div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
   </section>
 
+  <!-- Sponsors -->
+  <section class="section section-alt" id="sponsors">
+    <div class="container">
+      <h2>Our Sponsors</h2>
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <p class="sponsor-tier">Title Sponsor</p>
+          <div class="sponsor-img-wrap">
+            <img src="images/sponsor1-jcsoni.png" alt="JC Soni Jewellers" />
+          </div>
+        </div>
+        <div class="sponsor-card">
+          <p class="sponsor-tier">Presenting Sponsor</p>
+          <div class="sponsor-img-wrap">
+            <img src="images/sponsor2-nazly.png" alt="Nazly Mamedova Law" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I join the club?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Simple - just show up to a practice! All our practices are listed in the <a href="#schedule">Club Schedule</a> above, so feel free to come out to any one of them. Once you show some interest and attend a practice, we'll warmly welcome you into our WhatsApp group where all club communication happens. And don't hesitate to reach out via email or Instagram if you have any questions beforehand - we're always happy to help.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need prior cricket experience?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Not at all. We welcome players of all skill levels, from complete beginners to seasoned players.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What equipment do I need to bring?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Just yourself to start. We have shared equipment available at practices. As you get more involved, you may want your own bat and other kit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is the club open to non-UC students?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! Most of us are UC students and alumni, with a good number of non-UC folks as well - so you'll fit right in either way. We're a welcoming group and you definitely won't feel out of place.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does it cost to be a member?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>There is a membership fee that helps cover tournament registration and other expenses - but you don't need to pay anything to attend practices. Take your time, get a feel for the club, and see if it's the right fit for you. Thanks to our wonderful sponsors, we're proud to offer some of the best membership rates around. Reach out to any of our board members or team leaders for pricing details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Where do you play games and tournaments?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>We compete in the Midwest Cricket Tournament (MCT) and other regional tournaments across Ohio, Indiana, and Kentucky. Our home games are played in Milford, OH.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Does the club play tennis ball tournaments?
+            <span class="faq-chevron">&#8250;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Unfortunately no - we play leather ball cricket. That said, many of our members also play tennis ball cricket with various community teams. You're welcome to join us at practice and chat with them to find the right fit for you!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-label">Email</span>
+          <a href="mailto:uccricketclub@gmail.com">uccricketclub@gmail.com</a>
+        </div>
+        <div class="card">
+          <span class="card-label">Instagram</span>
+          <a href="https://www.instagram.com/uccricketclub" target="_blank">@uccricketclub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 University of Cincinnati Cricket Club. All Rights Reserved.</p>
+    <div class="container footer-inner">
+      <span>&copy; 2026 University of Cincinnati Cricket Club</span>
+    </div>
   </footer>
 
-<script src="assets/js/slideshow.js"></script>
+  <script src="assets/js/slideshow.js"></script>
+  <script src="assets/js/calendar.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
 </body>
 </html>
-
-
-
-
