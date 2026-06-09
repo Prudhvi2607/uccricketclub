@@ -253,6 +253,13 @@ body {
 .card-champion .card-label { color: #92400e; }
 .card-champion p strong { color: #92400e; }
 
+.card-runnerup {
+  border-color: #94a3b8;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+.card-runnerup .card-label { color: #475569; }
+.card-runnerup p strong { color: #475569; }
+
 .card p {
   margin: 0 0 0.35rem;
   color: var(--zinc-700);
