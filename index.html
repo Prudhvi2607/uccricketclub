@@ -44,7 +44,7 @@
       <div class="navbar-links">
         <a href="#about">About</a>
         <a href="#highlights">Highlights</a>
-        <a href="#schedule">Schedule</a>
+        <a href="#practice">Practice</a>
         <a href="#leaders">Leaders</a>
         <a href="#gallery">Gallery</a>
         <a href="#faq">FAQ</a>
@@ -114,44 +114,19 @@
     </div>
   </section>
 
-  <!-- Schedule -->
-  <section class="section" id="schedule">
+  <!-- Practice -->
+  <section class="section" id="practice">
     <div class="container">
-      <h2>Club Schedule</h2>
-      <p>Stay up to date with our practices, games, and club events throughout the season.</p>
-
-      <div class="cal-toolbar">
-        <div class="cal-legend">
-          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-practice"></span>Practice</span>
-          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-game"></span>Game</span>
-          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-social"></span>Social</span>
-          <span class="cal-legend-item"><span class="cal-legend-dot cal-dot-cancelled"></span>Cancelled</span>
-        </div>
-        <span id="cal-season-badge" class="cal-season-badge"></span>
-      </div>
-
-      <div class="cal-layout">
-        <div class="cal-panel">
-          <div class="cal-header">
-            <button class="cal-nav" id="cal-prev" aria-label="Previous month">&#8249;</button>
-            <span class="cal-month-label" id="cal-month-label"></span>
-            <button class="cal-nav" id="cal-next" aria-label="Next month">&#8250;</button>
-            <button class="cal-today-btn" id="cal-today-btn">Today</button>
-          </div>
-          <div class="cal-grid-head">
-            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
-            <span>Thu</span><span>Fri</span><span>Sat</span>
-          </div>
-          <div class="cal-grid" id="cal-grid"></div>
-        </div>
-
-        <div class="cal-sidebar">
-          <div class="cal-sidebar-head">Upcoming</div>
-          <div id="cal-upcoming"></div>
+      <h2>Practice Schedule</h2>
+      <p>Our season runs from <strong>April to October</strong>.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="card-label">Batting &amp; Bowling</span>
+          <p><strong>Thursdays, around 5:30 – 8:00 PM</strong></p>
+          <p class="card-meta">Miami Meadows Park, Milford, OH</p>
+          <p class="card-meta" style="margin-top:0.75rem">Practices may occasionally be cancelled. If you're new, drop us an email before heading out to confirm it's still on — we're always happy to hear from you.</p>
         </div>
       </div>
-
-      <div class="cal-detail" id="cal-detail" style="display:none"></div>
     </div>
   </section>
 
@@ -241,7 +216,7 @@
             <span class="faq-chevron">&#8250;</span>
           </button>
           <div class="faq-answer">
-            <p>Simple - just show up to a practice! All our practices are listed in the <a href="#schedule">Club Schedule</a> above, so feel free to come out to any one of them. Once you show some interest and attend a practice, we'll warmly welcome you into our WhatsApp group where all club communication happens. And don't hesitate to reach out via email or Instagram if you have any questions beforehand - we're always happy to help.</p>
+            <p>Simple - just show up to a practice! We do batting and bowling practice every Thursday around 5:30 – 8:00 PM at Miami Meadows Park in Milford, OH. If you're new, send us an email beforehand to make sure practice is still on that week - we're always happy to hear from you. Once you attend, we'll warmly welcome you into our WhatsApp group where all club communication happens.</p>
           </div>
         </div>
 
@@ -334,7 +309,6 @@
   </footer>
 
   <script src="assets/js/slideshow.js"></script>
-  <script src="assets/js/calendar.js"></script>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
